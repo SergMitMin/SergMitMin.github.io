@@ -3,7 +3,7 @@
 # Сергей Мит
 Last works
 
-[Prtfolio](https://sergmitmin.github.io/port/ "Port")- Портфолио v0.2b
+[Portfolio](https://sergmitmin.github.io/port/ "Port")- Портфолио v0.2b
 
 [Walls proj](https://sergmitmin.github.io/Walls/ "My Walls")- Walls v30 
 
