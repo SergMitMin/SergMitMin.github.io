@@ -38,6 +38,12 @@ header {
 	font-weight: 700;
 	color: #072b6f;
 	padding: 17px 55px;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+.header-button:hover {
+	box-shadow: none;
 }
 header small {
 	margin-top: 9px;
@@ -132,6 +138,7 @@ footer {
 }
 .footer-button {
 	display: inline-block;
+	text-decoration: none;
 	background-color: transparent;
 	color: #ffffff;
 	font-size: 18px;
@@ -139,6 +146,13 @@ footer {
 	padding: 12px 40px;
 	border-radius: 24px;
 	border: 1px solid #ffffff;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+.footer-button:hover {
+	background-color: #fff;
+	color: #3a7dfd;
 }
 
 @media (max-width: 1200px) {
