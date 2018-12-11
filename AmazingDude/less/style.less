@@ -1,0 +1,439 @@
+body {
+background-color: #282b2f;
+ p {
+ 	font-family: 'Fira Sans', sans-serif;
+ }
+ h2 {
+ 	font-family: 'Fira Sans', sans-serif;
+ }
+}
+/* Colors */
+@light: #666666;
+@white: #f9f9f9;
+@gray: #919191;
+@green: #2ebd59;
+.reg(){
+	font-size: 24px;
+	font-weight: 700;
+	text-align: left;
+}
+.usual() {
+	font-family: FiraSans;
+	color:@white;
+	font-size: 36px;/* Приближение из-за подстановки шрифтов */
+	font-weight: 300;
+	text-align: left;
+}
+/*Making grid*/
+.grid {
+	display: grid;
+	grid-template-areas: "a a a a a a a a a a a a"
+						 "b b b b b b c c c c c c"
+						 "e e e e e e e e e e e e"
+						 "f f f f f f g g g h h h"
+						 "j j j j j j j j j j j j"
+						 "k k k k k k l l l l l l"
+						 "m m m m m m m m m m m m";
+	grid-template-columns: repeat(12, 8.33%);
+}
+
+.grid-item {
+	padding: 90px 210px;
+	min-height: 50px;
+	&-header {
+		display: grid;
+		height: 600px;
+		grid-area: a;
+		background: url(../img/HERO.png) center no-repeat;
+		background-size: cover;
+		.logo {
+			background: url(../img/LOGO.png) center no-repeat;
+			width: 80px;
+			height: 80px;
+			margin-bottom: 200px;
+		}
+		h2 {
+			font-size: 72px;/* Приближение из-за подстановки шрифтов */
+			font-weight: 300;
+			text-align: left;
+		}
+		p {
+			font-size: 30px;/* Приближение из-за подстановки шрифтов */
+			font-weight: 300;
+			line-height: 45px;/* Приближение из-за подстановки шрифтов */
+			text-align: left;
+		}
+		.brheader {
+			display: block;
+		}
+	}
+	&-red {
+		height: 500px;
+		grid-area: b;
+		background: url(../img/red-man.png) center no-repeat;
+		background-size: cover;
+	}
+	&-white {
+		grid-area: c;
+		background-color: #f3f1ef;
+		h2 {
+			margin-bottom: 40px;
+			color: @light;
+			.reg();
+		}
+		p {
+			font-family: FiraSans;
+			color:#666666;
+			font-size: 36px;/* Приближение из-за подстановки шрифтов */
+			font-weight: 300;
+			text-align: left;
+		}
+	}
+	&-image-block {
+		padding: 0;
+		font-size: 0px;
+		grid-area: e;
+		a {
+			display: inline-block;
+			width: 25%;
+				&:hover div img{
+					opacity: 0.8; /* Высветляем картинку, но она становится темнее, так как под ней черный фон */
+					transform: scale(1.05); /* Увеличение картинки */
+				}
+			.blacking {
+				background: #000;  /* У блока, оборачивающего картинку при наведении будет просвечивать черный фон */
+				overflow: hidden;  /* Ограничиваем видиую область */
+				img {
+					transition: opacity 300ms linear, transform 300ms linear;  /* Плавное изменение прозрачности и увеличения */
+					width: 100%;
+					height: auto;
+					display: block; /* Убираем полосу под картинкий */
+				}
+			}
+
+		}
+	}
+	&-instagram-form {
+		//height: 510px;
+		grid-area: f;
+		background-color: #3f729b;
+		h2 {
+			.reg();
+			color: @white;
+			margin-bottom: 50px;
+		}
+		p {
+			.usual();
+			margin-bottom: 20px;
+		}
+
+	}
+	&-skiing {
+		grid-area: g;
+		background: url(../img/skiis.png);
+		background-size: cover;
+		width: auto;
+		height: auto;
+
+	}
+	&-empty-blue {
+		grid-area: h;
+		background-color: #3f729b;
+	}
+	&-headphones {
+		padding: 0;
+		background: url(../img/photo2.png) center no-repeat;
+		background-size: cover;
+		min-height: 500px;
+		grid-area: j;
+		.form-wrapper {
+			margin-left: 25%;
+			width: 25%;
+			background-color: #212227;;
+			color: @white;
+			.self-form {
+				padding: 70px 0px 40px 50px;
+				h2 {
+					.reg();
+					color: @green;
+					margin-bottom: 20px;
+				}
+				p {
+					color: @white;
+					font-size: 14px;/* Приближение из-за подстановки шрифтов */
+					font-weight: 400;
+					line-height: 21px;/* Приближение из-за подстановки шрифтов */
+					text-align: left;
+				}
+				a {
+					margin-top: 50px;
+					text-decoration: none;
+					font-size: 18px;
+					color: @green;
+					text-transform: uppercase;
+					padding: 10px;
+					border: 1px solid @green;
+					border-radius: 20px;
+					&:hover {
+						color: #fefefe;
+						-webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+						box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+						border-color: @white;
+						-webkit-transition: all 0.5s ease;
+						transition: all 0.5s ease;
+					}
+				}
+				.btn {
+					margin-top: 40px;
+					display: inline-block;
+				}
+			}
+
+		}
+		.br-header {
+			display: block;
+		}
+	}
+
+	&-spotify-form {
+		grid-area: k;
+		background-color: #2ebd59;
+		h2 {
+			.reg();
+			color: @white;
+			margin-bottom: 50px;
+		}
+		p {
+			.usual();
+		}
+
+	}
+	&-itunes-form {
+		background-color: #282b2f;
+		min-height: 50px;
+		grid-area: l;
+		h2 {
+			.reg();
+			color: @white;
+			margin-bottom: 50px;
+		}
+		p {
+			.usual();
+		}
+
+	}
+	&-footer {
+		display: grid;
+		grid-template-areas: "a a a a b b b c c c c c";
+		min-height: 50px;
+		grid-area: m;
+		background-color: #212227;
+		h2 {
+			color: #f9f9f9;
+			margin-bottom: 40px;
+			font-size: 18px;
+			font-weight: 700;
+			text-align: left;
+		}
+		p {
+			color: #919191;
+			font-size: 14px;
+			margin-bottom: 40px;
+			text-align: left;
+			font-weight: 300;
+			line-height: 21px;
+		}
+
+		ul {
+			color: #919191;
+		}
+		&-form {
+			padding: 0px 150px 0px 0px;
+		}
+	}
+
+	.follow-form {
+		margin-top: 50px;
+		h2 {
+			margin-bottom: 15px;
+		}
+		a {	
+			font-size: 20px;
+			position: relative;
+			text-decoration: none;
+			color: @light;
+			text-align: center;
+			margin-bottom: 10px;
+			img {
+				vertical-align: bottom;
+			}
+		}
+		.socials-ico {
+			height: 18px;
+			width: 18px;
+		}
+	}
+	.subscribe-form {
+		margin-left: 20px;
+		h2 {
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 10px;
+		}
+		input {
+			width: 90%;
+			color: #fff;
+			border: 1px solid #fff;
+			background-color: rgba(144, 145, 147, 0.4);
+			border-radius: 7px;
+			margin-bottom: 50px;
+			padding: 18px 15px;
+		}
+		a {
+			margin-right: 10px;
+		}
+	}
+}
+.music-link {
+	display: block;
+	width: 250px;
+	font-weight: 700;
+	text-align: center;
+	margin-top: 50px;
+	text-decoration: none;
+	font-size: 18px;
+	color: @white;
+	text-transform: uppercase;
+	padding: 10px;
+	border: 2px solid @white;
+	border-radius: 20px;
+	&:hover {
+		color: #fefefe;
+		-webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+		box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+		border-color: @white;
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+}
+@media (max-width: 1400px) {
+	.grid-item {
+		padding-left: 20px;
+		padding-right: 20px;
+		&-image-block {
+			padding: 0;
+		}
+	}
+}
+@media(max-width: 999px) {
+	.grid {
+		grid-template-areas: "a" "c" "e" "f" "j" "k" "l" "m";
+		grid-template-columns: repeat(1, 100%);
+
+	}
+	.grid-item {
+		h2 {
+			text-align: center;
+			font-size: 25px;
+			font-weight: 700;
+		}
+		p {
+			text-align: center;
+			font-size: 18px;
+		}
+		&-instagram-form, &-itunes-form, &-spotify-form {
+			padding-right: 20px;
+			padding-left: 20px;
+			a {
+				display: block;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		&-header {
+			height: 300px;
+			padding: 20px 20px 40px 20px;
+			.logo {
+				display: none;
+			}
+		}
+		&-white {
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+		&-headphones {
+			background: url(../img/headphones.png) center no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 400px;
+			padding: 0;
+			.form-wrapper {
+				margin: 0;
+				width: 100%;
+				background-color: transparent;
+				text-align: center;
+				.self-form {
+					h2 {
+						text-align: center;
+						font-size: 25px;
+						font-weight: 700;
+					}
+					p {
+						text-align: center;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+		&-footer {
+			grid-template-areas: "c" "b" "a" "d";
+			padding: 20px 20px 20px 20px;
+			text-align: center;
+
+			h2 {
+				color: #f9f9f9;
+				margin-bottom: 40px;
+				font-size: 18px;
+				font-weight: 700;
+			}
+			p {
+				font-size: 14px;
+			}
+			.inc-form {
+				h2 {
+					margin-top: 30px;
+				}
+			}
+			.contacts-form {
+				h2 {
+					margin-bottom: 10px;
+				}
+				p {
+					margin-bottom: 10px;
+				}
+			}
+			.follow-form {
+				ul {
+					li {
+						display: inline-block;
+						margin-right: 5px;
+					}
+				}
+			}
+			.subscribe-form {
+				text-align: center;
+				margin-top: 40px;
+				width: 100%;
+				h2 {
+					text-align: center;
+				}
+				a {
+					margin-right: 25px;
+				}
+			}
+		}
+	}
+
+}
