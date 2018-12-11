@@ -9,5 +9,5 @@ Last works
 
 [AliSayedsDesign](https://sergmitmin.github.io/AliSayedsDesign/ "AliSayed")-  Пример работы
 
-[AmazingDude](https://sergmitmin.github.io/AmaizingDude/ "AmazingDude")-  Ещё один пример работы
+[AmazingDude](https://sergmitmin.github.io/AmazingDude/ "AmazingDude")-  Ещё один пример работы
 
