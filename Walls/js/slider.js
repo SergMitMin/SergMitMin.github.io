@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   $('.popup-btn').on('click', function(event) {
     event.preventDefault();
@@ -11,8 +12,8 @@ $(document).ready(function(){
   });
 /*Слайдер с отзывами*/
   $('.feedback-slider').slick({
-        prevArrow: '<button type="button" class="feedback-slider-btn feedback-prev-btn"><img src="../img/feedback/prev-arrow-button.svg"></button>',
-        nextArrow: '<button type="button" class="feedback-slider-btn feedback-next-btn"><img src="../img/feedback/next-arrow-button.svg"></button>'
+        prevArrow: '<button type="button" class="feedback-slider-btn feedback-prev-btn"><img src="./img/left-arrow.svg"></button>',
+        nextArrow: '<button type="button" class="feedback-slider-btn feedback-next-btn"><img src="./img/right-arrow.svg"></button>'
   });
 /*Слайдер с преимуществами*/
   $('.features-slider').slick({
