@@ -7,5 +7,7 @@ Last works
 
 [Gipsolit](https://sergmitmin.github.io/Walls/ "Walls")-  сайт Gipsolit
 
-[Gipsolit](https://sergmitmin.github.io/AliSayedsDesign/ "AliSayed")-  сайт на Grid css
+[AliSayedsDesign](https://sergmitmin.github.io/AliSayedsDesign/ "AliSayed")-  Пример работы
+
+[AmazingDude](https://sergmitmin.github.io/AmaizingDude/ "AmazingDude")-  Ещё один пример работы
 
