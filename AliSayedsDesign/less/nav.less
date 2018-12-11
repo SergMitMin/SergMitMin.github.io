@@ -1,0 +1,181 @@
+/*navigation styles*/
+.navBurger {
+    h3 {
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+    }
+    position: fixed;
+    right: 210px;
+    top: 90px;
+    cursor: pointer;
+    background: #111;
+    box-sizing: border-box;
+    background-clip: content-box;
+    width: 40px;
+    height: 24px;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        background: #111;
+        height: 2px;
+        width: 100%;
+        right: 0;
+        will-change: rotate;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    &:before {
+        top: -10px;
+    }
+    &:after {
+        bottom: -10px;
+        width: 90%;
+    }
+    &.active {
+        background: transparent;
+        background-clip: content-box;
+    }
+    &.active:before {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        top: 0;
+        background: #eee;
+        width: 110%;
+    }
+    &.active:after {
+        bottom: 0;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        background: #eee;
+        width: 110%;
+    }
+}
+
+.overlay {
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 50%;
+    opacity: 0;
+    transform-origin: right top;
+    transform: scale(0);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    &.open {
+        opacity: 0.8;
+        visibility: visible;
+        transform: scale(1);
+        li {
+            display: block;
+            animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5)
+                forwards;
+            animation-delay: 0.4s;
+            transform: rotate(-7deg);
+            transform-origin: right bottom;
+            &:nth-of-type(2) {
+                animation-delay: 0.5s;
+            }
+            &:nth-of-type(3) {
+                animation-delay: 0.6s;
+            }
+            &:nth-of-type(4) {
+                animation-delay: 0.7s;
+            }
+            &:nth-of-type(5) {
+                animation-delay: 0.8s;
+            }
+        }
+    }
+}
+
+.overlayMenu {
+    position: absolute;
+    text-align: right;
+    right: 45%;
+    top: 20%;//position of menu items
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        height: 100%;
+        li {
+            display: block;
+            position: relative;
+            opacity: 0;
+            width: 100%;
+            a {
+                display: inline-block;
+                border: 1px solid #000;
+                color: #fff;
+                text-decoration: none;
+                font-size: 30px;
+                padding: 10px 40px 10px 40px;
+                margin: 5px 0;
+                transition: 0.2s;
+                &:hover,
+                &:active,
+                &:focus {
+                    transform: translateX(-2px);
+                    padding-left: 80px;
+                    outline: 1px solid rgba(255, 255, 255, 0.3);
+                    background: rgba(255, 255, 255, 0.03);
+                }
+            }
+        }
+    }
+}
+
+.locked {
+    overflow: hidden;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 50px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+    }
+}
+@media(max-width: 999px) {
+    .navBurger {
+        position: fixed;
+        right: 10px;
+        top: 20px;
+    }
+    .overlay {
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .overlayMenu {
+        right: 35%;
+        top: 10%;//position of menu items
+        ul {
+            li {
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

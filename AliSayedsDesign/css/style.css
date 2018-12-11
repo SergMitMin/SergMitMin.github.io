@@ -1,0 +1,327 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\000031}}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\000034}}
+h2 {
+  font-size: 45px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\000038}}
+h3 {
+  font-size: 42px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000312}}
+h4 {
+  font-size: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000315}}
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000319}}
+h2 span,
+h3 span,
+h4 span {
+  font-weight: 900;
+}
+@media (max-width: 1000px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000322}}
+  h2,
+  h3,
+  h4 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000327}}
+p {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 28px;
+}
+@media (max-width: 1000px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000331}}
+  p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000336}}
+a,
+input,
+textarea {
+  font-size: 17px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000339}}
+a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 15px 0;
+  display: block;
+  max-width: 200px;
+  text-align: center;
+  margin-top: 50px;
+  transition: all 0.2s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000350}}
+a:hover {
+  cursor: pointer;
+  background-color: #bfbfbf;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000355}}
+button {
+  display: block;
+  background-image: url(../img/menu.svg);
+  width: 33px;
+  height: 33px;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 64px;
+}
+@media (max-width: 1000px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000363}}
+  button {
+    margin-bottom: 30px;
+  }
+}
+/*creating grid template*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000368}}
+.grid {
+  display: grid;
+  grid-template-areas: "a a a a a a b b b" "c c c c d d d d d" "c c c c e e e e e" "f f g g g g g g g";
+}
+@media (max-width: 700px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000374}}
+  .grid {
+    grid-template-areas: "a" "b" "c" "d" "e" "f" "g";
+  }
+}
+/*Styles for form*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000380}}
+.form {
+  max-width: 620px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000381}}
+.form textarea {
+  width: 100%;
+  min-height: 125px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000385}}
+.form input {
+  width: 44%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\0000388}}
+.form textarea,
+.form input {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  padding: 18px 15px;
+}
+/*For placeholder text*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003102}}
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003103}}
+.form input::-moz-placeholder,
+.form-textarea::-moz-placeholder {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003104}}
+.form input:-moz-placeholder,
+.form-textarea:-moz-placeholder {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003105}}
+.form input:-ms-input-placeholder,
+.form-textarea:-ms-input-placeholder {
+  color: #fff;
+}
+/*Styles for blocks*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003108}}
+.grid-item-dog {
+  height: 715px;
+  background-image: url(../img/dog.png);
+  grid-area: a;
+  background-size: cover;
+}
+@media (max-width: 700px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003113}}
+  .grid-item-dog {
+    display: none;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003117}}
+.grid-item-gray {
+  grid-area: b;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003120}}
+.grid-item-blue {
+  background-image: url(../img/DrawingSketch.png);
+  grid-area: c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003121}}
+.grid-item-blue div {
+  margin-bottom: 70px;
+}
+@media (max-width: 1000px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003124}}
+  .grid-item-blue div:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003134}}
+.grid-item-starting {
+  background-image: url(../img/BestStarting.png);
+  grid-area: d;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003135}}
+.grid-item-starting a {
+  color: #000;
+  border: 1px solid #000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003142}}
+.grid-item-dummy {
+  background-image: url(../img/VerifiedDummy.png);
+  grid-area: e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003146}}
+.grid-item-designed {
+  background-image: url(../img/designed.png);
+  grid-area: f;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  min-height: 600px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003147}}
+.grid-item-designed div {
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003156}}
+  .grid-item-designed {
+    min-height: inherit;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003160}}
+.grid-item-hello {
+  background-image: url(../img/SayHello.png);
+  grid-area: g;
+  min-height: 600px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003164}}
+.grid-item-hello-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+@media (max-width: 1000px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003170}}
+  .grid-item {
+    padding: 0px;
+    min-height: inherit;
+  }
+}
+/*some styles for blocks*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003176}}
+.grid-item-bg,
+.grid-item-blue,
+.grid-item-starting,
+.grid-item-dummy,
+.grid-item-designed,
+.grid-item-hello {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003181}}
+.grid-item-gray,
+.grid-item-blue,
+.grid-item-starting,
+.grid-item-dummy,
+.grid-item-designed,
+.grid-item-hello {
+  padding: 60px 20% 60px 50px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003184}}
+.grid-item-blue,
+.grid-item-dummy,
+.grid-item-designed,
+.grid-item-hello {
+  color: #fff;
+}
+/*Contacts styles*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003188}}
+.socials-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003193}}
+.socials-list li {
+  margin-right: 10px;
+  margin-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003196}}
+.socials-list li a {
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+  display: block;
+  border: none;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003205}}
+.socials-list-fb {
+  background-image: url(../img/Facebook.svg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003208}}
+.socials-list-db {
+  background-image: url(../img/Dribbble.svg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003211}}
+.socials-list-tw {
+  background-image: url(../img/Twitter.svg);
+}
+/*br for headers*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003216}}
+.header-br {
+  display: block;
+}
+@media (max-width: 700px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003218}}
+  .header-br {
+    display: initial;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003222}}
+.logo {
+  display: block;
+  margin-bottom: 25px;
+  width: 90px;
+  height: 90px;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+}
+@media (max-width: 700px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sergejmitasov\/Desktop\/GridSite\/less\/style\.less}line{font-family:\00003229}}
+  .logo {
+    margin: 0 auto 25px;
+  }
+}

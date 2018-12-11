@@ -1,0 +1,232 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+h2 {
+	font-size: 45px;
+	
+}
+h3 {
+	font-size: 42px;
+
+}
+h4 {
+	font-size: 40px;
+}
+h2,h3,h4 {
+	margin-top: 0;
+	font-weight: 200;
+	letter-spacing: 1px;
+	span {
+		font-weight: 900;
+	}
+	@media (max-width: 1000px){
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
+}
+p {
+	margin-bottom: 0;
+	font-size: 16px;
+	line-height: 28px;
+	@media (max-width: 1000px){
+		font-size: 13px;
+		line-height: 22px;
+	}
+}
+a, input, textarea {
+	font-size: 17px;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	padding: 15px 0;
+	display: block;
+	max-width: 200px;
+	text-align: center;
+	margin-top: 50px;
+	transition: all 0.2s;
+	&:hover {
+		cursor: pointer;
+		background-color: darken(#fff, 25%);
+	}
+}
+button {
+	display: block;
+	background-image: url(../img/menu.svg);
+	width: 33px;
+	height: 33px;
+	background-color: transparent;
+	border: none;
+	margin-bottom: 64px;
+	@media (max-width: 1000px){
+		margin-bottom: 30px;
+	}
+}
+/*creating grid template*/
+.grid {
+	display: grid;
+	grid-template-areas: "a a a a a a b b b"
+						 "c c c c d d d d d"
+						 "c c c c e e e e e"
+						 "f f g g g g g g g";
+	@media (max-width: 700px) {
+		grid-template-areas: "a" "b" "c" "d" "e" "f" "g";
+	}
+}
+
+/*Styles for form*/
+.form {
+	textarea {
+		width: 100%;
+		min-height: 125px;
+	}
+	input {
+		width: 44%;
+	}
+	textarea, input {
+		color: #fff;
+		border: 1px solid #fff;
+		background-color: transparent;
+		border-radius: 7px;
+		margin-bottom: 12px;
+		padding: 18px 15px;
+	}
+	max-width: 620px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+/*For placeholder text*/
+.form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder { color: #fff; }
+.form input::-moz-placeholder, .form-textarea::-moz-placeholder { color: #fff; }
+.form input:-moz-placeholder, .form-textarea:-moz-placeholder { color: #fff; }
+.form input:-ms-input-placeholder, .form-textarea:-ms-input-placeholder { color: #fff; }
+/*Styles for blocks*/
+.grid-item {
+	&-dog {
+		height: 715px;
+		background-image: url(../img/dog.png);
+		grid-area: a;
+		background-size: cover;
+		@media (max-width: 700px) {
+			display: none;
+			}
+		}
+	&-gray {
+		grid-area: b;
+	}
+	&-blue {
+		div {
+			margin-bottom: 70px;
+			&:last-child {
+				@media (max-width: 1000px){
+						margin-bottom: 0;
+						padding-bottom: 0;
+					}
+			}
+		}
+		background-image: url(../img/DrawingSketch.png);
+		grid-area: c;
+
+	}
+	&-starting {
+		a {
+			color: #000;
+			border: 1px solid #000;
+		}
+		background-image: url(../img/BestStarting.png);
+		grid-area: d;
+	}
+	&-dummy {
+		background-image: url(../img/VerifiedDummy.png);
+		grid-area: e;
+	}
+	&-designed {
+		div {
+			width: 100%;
+		}
+		background-image: url(../img/designed.png);
+		grid-area: f;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: space-around;
+		min-height: 600px;
+		@media (max-width: 1000px){
+			min-height: inherit;
+		}
+	}
+	&-hello {
+		background-image: url(../img/SayHello.png);
+		grid-area: g;
+		min-height: 600px;
+		&-container {
+			display: flex;
+			flex-wrap: wrap;
+			align-content: space-between;
+		}
+	}
+	@media (max-width: 1000px){
+		padding: 0px;
+		min-height: inherit;
+	}
+}
+/*some styles for blocks*/
+.grid-item-bg, .grid-item-blue, .grid-item-starting, .grid-item-dummy, .grid-item-designed, .grid-item-hello  {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.grid-item-gray, .grid-item-blue, .grid-item-starting, .grid-item-dummy, .grid-item-designed, .grid-item-hello  {
+	padding: 60px 20% 60px 50px;
+}
+.grid-item-blue, .grid-item-dummy, .grid-item-designed, .grid-item-hello {
+	color: #fff;
+}
+/*Contacts styles*/
+.socials-list {
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 0;
+	li {
+		margin-right: 10px;
+		margin-top: 0;
+		a {
+			background-repeat: no-repeat;
+			width: 45px;
+			height: 45px;
+			display: block;
+			border: none;
+			padding: 0;
+		}
+	}
+	&-fb {
+		background-image: url(../img/Facebook.svg);
+	}
+	&-db {
+		background-image: url(../img/Dribbble.svg);
+	}
+	&-tw {
+		background-image: url(../img/Twitter.svg);
+	}
+}
+/*br for headers*/
+.header-br {
+	display: block;
+	@media (max-width: 700px) {
+		display: initial;
+	}
+}
+.logo {
+	display: block;
+	margin-bottom: 25px;
+	width: 90px;
+	height: 90px;
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	@media (max-width: 700px) {
+		margin: 0 auto 25px;
+	}
+}
